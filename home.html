@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Overspeed Detection Project</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Roboto', sans-serif;
+    }
+
+    body {
+      background: linear-gradient(to right, #1c92d2, #f2fcfe);
+      color: #333;
+      padding: 20px;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 2rem;
+      animation: fadeIn 1.5s ease;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      color: #0a3d62;
+    }
+
+    .container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      animation: slideUp 2s ease;
+    }
+
+    .card {
+      background: white;
+      border-radius: 12px;
+      padding: 1.5rem;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-10px);
+    }
+
+    .card img {
+      width: 100%;
+      border-radius: 10px;
+      margin-bottom: 1rem;
+    }
+
+    h2 {
+      font-size: 1.5rem;
+      color: #3c6382;
+      margin-bottom: 0.5rem;
+    }
+
+    ul {
+      padding-left: 20px;
+    }
+
+    ul li {
+      margin-bottom: 0.5rem;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes slideUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 3rem;
+      font-size: 0.9rem;
+      color: #555;
+    }
+
+    .diagram-link {
+      text-align: center;
+      margin-top: 3rem;
+    }
+    .diagram-link a {
+      display: inline-block;
+      background-color: #1565c0;
+      color: white;
+      padding: 12px 28px;
+      border-radius: 30px;
+      font-size: 1rem;
+      font-weight: bold;
+      text-decoration: none;
+      box-shadow: 0 8px 20px rgba(21, 101, 192, 0.2);
+      transition: background-color 0.3s, transform 0.3s;
+    }
+    .diagram-link a:hover {
+      background-color: #0d47a1;
+      transform: translateY(-3px);
+    }
+
+    @media screen and (max-width: 768px) {
+      h1 {
+        font-size: 2rem;
+      }
+
+      .card {
+        padding: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Overspeed Detection System</h1>
+    <p>A Smart Embedded Project for Real-Time Speed Monitoring</p>
+  </header>
+
+  <div class="container">
+    <div class="card">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/3/38/Arduino_Uno_-_R3.jpg" alt="Arduino UNO R3">
+      <h2>Microcontroller & Components</h2>
+      <ul>
+        <li>Arduino UNO R3</li>
+        <li>1602 I2C LCD Display</li>
+        <li>2 IR Sensors</li>
+        <li>Piezo Buzzer</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <img src="https://store.freenove.com/cdn/shop/files/FNK0079A.MAIN_d231e58d-d450-44ef-9f2f-4a98fbca9a39.jpg?v=1737678707&width=1100" alt="LCD Display">
+      <h2>Software & Languages</h2>
+      <ul>
+        <li>Arduino IDE</li>
+        <li>STM32CubeIDE</li>
+        <li>Code Composer Studio (for MSP432)</li>
+        <li>C/C++, Embedded C, MicroPython</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <img src="https://static.blikai.com/prod/20240706_0_webp/infrared_sensor.webp" alt="IR Sensor">
+      <h2>Libraries & Protocols</h2>
+      <ul>
+        <li>Speed Sensor Drivers</li>
+        <li>LCD/TFT Libraries</li>
+        <li>GSM/GPS Libraries</li>
+        <li>UART for GSM/GPS</li>
+        <li>SPI/I2C for radar/LCD</li>
+        <li>AT Commands for SIM800L</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <img src="https://pmdway.com/cdn/shop/products/ps1240-buzzer-pmdway_1800x1800.jpg?v=1559782179" alt="Piezo Buzzer">
+      <h2>Features & Applications</h2>
+      <ul>
+        <li>Real-time Speed Calculation</li>
+        <li>Speed Threshold Alert</li>
+        <li>Compact & Cost-effective</li>
+        <li>Expandable for GSM/GPS Integration</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="diagram-link">
+    <a href="diagrams.html">View Block Diagram</a>
+  </div>
+
+
+  <footer>
+    <p>&copy; 2025 Overspeed Detection Project | Designed for Embedded Systems Seminar</p>
+  </footer>
+</body>
+</html>
